@@ -13,7 +13,7 @@
 
             <div class="d-flex justify-content-center py-4">
               <a href="javascript:void()" class="logo d-flex align-items-center w-auto">
-                <h3>វិទ្យាល័យហ៊ុនសែនត្បែង</h3>
+                <h3>វិទ្យាល័យ បាកាន</h3>
               </a>
             </div>
 
@@ -25,17 +25,17 @@
                   <p class="text-center small">បញ្ចូល អ៊ីម៉ែល និង លេខកូដសម្ងាតរបស់អ្នក</p>
                 </div>
 
-                <form id="form-login" action="" class="row g-3 needs-validation" method="POST">
+                <form id="form-login" action="{{ route('admin.login.process') }}" class="row g-3 needs-validation" method="POST">
                   @csrf
                   <!-- Display messages -->
                   @if (Session::has('error'))
                     <p class="text-center alert bg-danger text-light p-2">{{ Session::get('error') }}</p>
                   @elseif (Session::has('success'))
                     <p class="text-center alert bg-success text-light p-2">{{ Session::get('success') }}</p>
-                  @elseif (Session::has('cooldown'))
+                  {{-- @elseif (Session::has('cooldown'))
                     <p id="cooldown-message" class="text-center alert bg-warning text-dark p-2">
                       {{ Session::get('cooldown') }}
-                    </p>
+                    </p> --}}
                   @endif
 
                   <div class="col-12 mt-2">
@@ -68,7 +68,7 @@
                   </div>
 
                   <div class="col-12">
-                    <p class="small mb-0">អ្នកមិនចង់ចាំលេខកូដសម្ងាត់? <a href="">ត្រូវបានភ្លេច</a></p>
+                    <p class="small mb-0">អ្នកមិនចង់ចាំលេខកូដសម្ងាត់? <a href="{{ route('admin.send.email.show') }}">ត្រូវបានភ្លេច</a></p>
                   </div>
                 </form>
 

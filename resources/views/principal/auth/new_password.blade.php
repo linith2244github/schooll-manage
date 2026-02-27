@@ -15,7 +15,7 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo d-flex align-items-center w-auto">
                   <img src="assets/img/logo.png" alt="">
-                  <h3>វិទ្យាល័យហ៊ុនសែនត្បែង</h3>
+                  <h3>វិទ្យាល័យ បាកាន</h3>
                 </a>
               </div>
 
@@ -24,7 +24,7 @@
                 <div class="card-body">
 
                   
-                    <form method="POST" action="" id="reset-form" class="row g-3 needs-validation p-3">
+                    <form method="POST" action="{{ route('admin.') }}" id="reset-form" class="row g-3 needs-validation p-3">
                         @csrf
                         
                         <div class="col-12">

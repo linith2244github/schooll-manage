@@ -14,14 +14,14 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo d-flex align-items-center w-auto">
                   <img src="assets/img/logo.png" alt="">
-                  <h3>វិទ្យាល័យហ៊ុនសែនត្បែង</h3>
+                  <h3>វិទ្យាល័យ បាកាន</h3>
                 </a>
               </div>
 
               <div class="card mb-3">
 
                 <div class="card-body">
-                  <form id="forgot-password-form" action="" class="row g-3 needs-validation" method="POST">
+                  <form id="forgot-password-form" action="{{ route('admin.send.email.process') }}" class="row g-3 needs-validation" method="POST">
                     @csrf
                     <div class="col-12 p-3">
                       @if (Session::has('error'))
